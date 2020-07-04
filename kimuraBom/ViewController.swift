@@ -52,10 +52,12 @@ class ViewController: UIViewController {
         btnWidthAnchor = btn.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: CGFloat(imageRatio))
         btnWidthAnchor.isActive = true
         // btnの高さは、親ビューの幅のimageRatio倍
-        btnHeightAnchor = btn.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: CGFloat(imageRatio))
+        btnHeightAnchor = btn.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: CGFloat(imageRatio-0.1))
         btnHeightAnchor.isActive = true
         //画像のアスペクト比を保つ
         btn.imageView?.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .fill
+        btn.contentVerticalAlignment = .fill
         // タップされたときのactionをセット
         btn.addTarget(self, action: #selector(ViewController.buttonTapped(_:)),for: .touchUpInside)
         
@@ -64,12 +66,13 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: "kimura2")
         self.view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        // btn2の横方向の中心は、親ビューの横方向の中心と同じ
+        // imageViewの横方向の中心は、親ビューの横方向の中心と同じ
         imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        // btn2の縦方向の中心は、親ビューの縦方向の中心と同じ
+        // imageViewの縦方向の中心は、親ビューの縦方向の中心と同じ
         imageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        // btn2の高さは、親ビューの幅のimageRatio倍
+        // imageViewの横幅高さの制約を設定
         imageView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalTo: self.view.heightAnchor,multiplier: CGFloat(0.5)).isActive = true
         //画像を非表示
         imageView.isHidden = true
         
@@ -129,7 +132,7 @@ class ViewController: UIViewController {
             view.removeConstraint(btnHeightAnchor)
             view.removeConstraint(btnWidthAnchor)
             //新たなimageRatioで高さと横幅の設定のmultiplierを再設定
-            btnHeightAnchor = btnHeightAnchor.setMultiplier(CGFloat(imageRatio))
+            btnHeightAnchor = btnHeightAnchor.setMultiplier(CGFloat(imageRatio*(2/3)))
             btnWidthAnchor = btnWidthAnchor.setMultiplier(CGFloat(imageRatio))
             //制約を適用
             view.addConstraint(btnHeightAnchor)
@@ -150,7 +153,7 @@ class ViewController: UIViewController {
             view.removeConstraint(btnHeightAnchor)
             view.removeConstraint(btnWidthAnchor)
             //新たなimageRatioで高さと横幅の設定のmultiplierを再設定
-            btnHeightAnchor = btnHeightAnchor.setMultiplier(CGFloat(imageRatio))
+            btnHeightAnchor = btnHeightAnchor.setMultiplier(CGFloat(imageRatio-0.1))
             btnWidthAnchor = btnWidthAnchor.setMultiplier(CGFloat(imageRatio))
             //制約を適用
             view.addConstraint(btnHeightAnchor)
