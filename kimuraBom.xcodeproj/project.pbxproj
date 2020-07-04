@@ -15,6 +15,7 @@
 		D31E4B5124A4ACA100ABAC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31E4B4F24A4ACA100ABAC1D /* LaunchScreen.storyboard */; };
 		D31E4B5C24A4ACA200ABAC1D /* kimuraBomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E4B5B24A4ACA200ABAC1D /* kimuraBomTests.swift */; };
 		D31E4B6724A4ACA200ABAC1D /* kimuraBomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E4B6624A4ACA200ABAC1D /* kimuraBomUITests.swift */; };
+		D31E4B7524AB55AB00ABAC1D /* NSLayoutConstraint+setMultiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E4B7424AB55AB00ABAC1D /* NSLayoutConstraint+setMultiplier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D31E4B6224A4ACA200ABAC1D /* kimuraBomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kimuraBomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31E4B6624A4ACA200ABAC1D /* kimuraBomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kimuraBomUITests.swift; sourceTree = "<group>"; };
 		D31E4B6824A4ACA200ABAC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31E4B7424AB55AB00ABAC1D /* NSLayoutConstraint+setMultiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+setMultiplier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D31E4B4D24A4ACA100ABAC1D /* Assets.xcassets */,
 				D31E4B4F24A4ACA100ABAC1D /* LaunchScreen.storyboard */,
 				D31E4B5224A4ACA100ABAC1D /* Info.plist */,
+				D31E4B7424AB55AB00ABAC1D /* NSLayoutConstraint+setMultiplier.swift */,
 			);
 			path = kimuraBom;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D31E4B4924A4AC9D00ABAC1D /* ViewController.swift in Sources */,
+				D31E4B7524AB55AB00ABAC1D /* NSLayoutConstraint+setMultiplier.swift in Sources */,
 				D31E4B4524A4AC9D00ABAC1D /* AppDelegate.swift in Sources */,
 				D31E4B4724A4AC9D00ABAC1D /* SceneDelegate.swift in Sources */,
 			);
